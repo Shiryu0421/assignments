@@ -1,0 +1,9 @@
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+body { margin:0; padding:0; }
+#map { position:absolute; height:100%; width:100%; }
+#title { z-index: 9999; 
+    background-color:greenyellow; 
+    opacity: 80%; 
+    text-align: center
