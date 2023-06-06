@@ -1,0 +1,153 @@
+<!-- A Versatile Layout for Full-screen Maps by Andy Cochran
+Andy Cochran 
+From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-maps-229cec508b22 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Final Project</title>
+
+    
+    <!-- JavaScript Libraries-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+
+  
+    <!-- CSS Links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet" />
+    <link href="Final%20Project%20CSS.css" rel="stylesheet" />
+    
+
+    
+</head>
+
+<body>
+
+
+    <div class="site-header">
+        <strong class="site-title">Short Guide of Kobe</strong>
+    </div>
+
+    <div class="site-main grid-x has-content-open">
+
+        <div class="search-container cell medium-3 large-2">
+            <input type="text" placeholder="Search..." class="search" />
+            <ul class="search-results no-bullet">
+                <li>Airport</li>
+                <li>Rail</li>
+                <li>Mountaint</li>
+            </ul>
+        </div>
+        
+        <div class="map-container cell medium-auto large-order-2">
+             <!--  ADD iframe here, inside the versitle layout's map container (VI.2.)   -->
+                <iframe src="Final%20Project%20Markers.html" title="Map"></iframe> 
+
+        </div>
+
+        <!--  Sidebar panel  -->
+        <div class="sidebar cell medium-3 large-2 large-order-1 show-for-medium">
+            <h5>Sidebar</h5>
+            <ul>
+                <li><a class="content-content" href="#">Open Content</a></li>
+                <li><a class="content-airport" href="#">Airport</a></li>
+                <li><a class="content-rail" href="#">Rail</a></li>
+                <li><a class="content-mountain" href="#">Mountain</a></li>
+                <li><a class="content-park" href="#">Park</a></li>
+            </ul>
+
+            <hr />
+
+        </div>
+
+        <div class="content-close-button-container">
+            <a href="#" class="content-close-button">×</a>
+        </div>
+        
+        <!--  Content panel  -->
+        <div id="contentPanelText"  class="content cell large-5 large-order-3">
+            <h2>Content</h2>
+            <p>This is a short guide to Kobe. My hometown is surrounded by mountains, so it is full of nature. I chose my hometown this time because I want to introduce it. It uses some kind of symbol to indicate where it is. The mountain symbol shows where the mountain is. A tree symbol shows where the park is. The airplane symbol shows the airport. Finally, the station symbol shows where the station is. I want people to know where things are by looking at this map</p>
+            <img id="myImg" src="kobe.png" width="800" height="500">
+            <p>This is view of Kobe </p>
+            <img id="myImg" src="kobe-night.jpg" width="800" height="500">
+            <p>This is view of Kobe night</p>
+
+        </div>   
+        <!--<div class="content cell large-5 large-order-3">
+            //<h2>Content</h2>
+            //<p>Test 2</p>
+        //</div>-->
+ 
+        
+
+
+    </div>
+
+    <script>
+       
+        $(document).ready(function() {
+
+            $('.content-close-button').click(function() {
+                $('.content-close-button').hide();
+                $('.content').hide();
+                $('.site-main').removeClass('has-content-open')
+
+                // When the map is resized programmatically, window resize must be triggered so that the map renders in the newly allotted space.
+                window.dispatchEvent(new Event('resize'));
+
+            });
+
+            $('.content-content').click(function() {
+                $('.content-close-button').show();
+                $('.content').show();
+                $('.site-main').addClass('has-content-open')
+                window.dispatchEvent(new Event('resize'));
+                document.getElementById("contentPaneltext-1").innerHTML = "<h2>Content</h2>This is a short guide to Kobe. My hometown is surrounded by mountains, so it is full of nature. I chose my hometown this time because I want to introduce it. It uses some kind of symbol to indicate where it is. The mountain symbol shows where the mountain is. A tree symbol shows where the park is. The airplane symbol shows the airport. Finally, the station symbol shows where the station is. I want people to know where things are by looking at this map. ";
+        
+
+            });
+
+            $('.content-airport').click(function() {
+                $('.content-close-button').show();
+                $('.content').show();
+                $('.site-main').addClass('has-content-open')
+                window.dispatchEvent(new Event('resize'));
+                document.getElementById("contentPanelText").innerHTML = "<h2>Airport</h2>Kobe Airport is the only airport in Kobe. This airport is accessible from any train station in Kobe. So in Kobe, it is often accessed by people. Since the airport is an artificial island, it is a sea airport and handles 3 million air passengers a year. It has facilities such as a 2,500-meter runway and an airport terminal building. The terminal building was designed with the concept of a compact and user-friendly terminal, and is directly connected to the adjacent Kobe Airport Station by a few meters of connecting walkway. It takes 18 minutes by train to Sannomiya (22 minutes directly to Shin-Kobe Station), making access to the center of Kobe City highly convenient."+ '<img id="myImg" src="airport.png" width="800" height="500">' + "This is kobe airport ovewview.";
+            });
+            
+            $('.content-rail').click(function() {
+                $('.content-close-button').show();
+                $('.content').show();
+                $('.site-main').addClass('has-content-open')
+                window.dispatchEvent(new Event('resize'));
+                document.getElementById("contentPanelText").innerHTML = "<h2>Rail</h2>The train symbol on this map has stations all over Kobe, and you can access any place. Some stations have access to mountains, parks, and airports. This map picks up the major city of Sannomiya, mountains, parks, and stations near the airport.　In Japan, people mainly use trains instead of cars." + '<img id="myImg" src="sannomiya.png" width="800" height="500">' + "This is Sannomiya station, it is biggest station in Kobe.";
+                
+            });
+            
+            $('.content-mountain').click(function() {
+                $('.content-close-button').show();
+                $('.content').show();
+                $('.site-main').addClass('has-content-open')
+                window.dispatchEvent(new Event('resize'));
+                document.getElementById("contentPanelText").innerHTML = "<h2>Mountain</h2>This mountain symbol shows the mountains in Kobe. These mountains are suitable for hiking, and the scenery at the top of each mountain is said to be beautiful. All of them are about the same elevation, so all mountains are relatively easy to climb. The scenery is different depending on the mountain." + '<img id="myImg" src="mountain.png" width="800" height="500">' + "This is Rokko mountain." + '<img id="myImg" src="mountain-night.png" width="800" height="500">' + "Rokko mounatain night view.";
+                
+            });
+            
+            $('.content-park').click(function() {
+                $('.content-close-button').show();
+                $('.content').show();
+                $('.site-main').addClass('has-content-open')
+                window.dispatchEvent(new Event('resize'));
+                document.getElementById("contentPanelText").innerHTML = "<h2>Park</h2>For the symbol of this park, I chose a relatively large park in Kobe or a park with beautiful flowers. I chose those parks because the purpose of this map is to guide you. These parks are also close to the station, so you can reach your destination relatively early. Some parks are used as soccer and baseball places." + '<img id="myImg" src="park1.png" width="800" height="500">' + '<img id="myImg" src="flower.jpg" width="800" height="500">' + "This is Okura park, there is beutiful flower road." + '<img id="myImg" src="park2.png" width="800" height="500">' + "This is Minato no Mori Park, there is track area.";
+                
+            });
+
+            
+        });
+    </script>
+
+</body>
+
+</html>
