@@ -1,5 +1,4 @@
-<!-- A Versatile Layout for Full-screen Maps by Andy Cochran
-Andy Cochran 
+<!-- A Versatile Layout for Full-screen Maps
 From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-maps-229cec508b22 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +23,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
 
 <body>
 
-
+    <!--  TITLE  -->
     <div class="site-header">
         <strong class="site-title">Short Guide of Kobe</strong>
     </div>
@@ -71,8 +70,10 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
             <p>This is a short guide to Kobe. My hometown is surrounded by mountains, so it is full of nature. I chose my hometown this time because I want to introduce it. It uses some kind of symbol to indicate where it is. The mountain symbol shows where the mountain is. A tree symbol shows where the park is. The airplane symbol shows the airport. Finally, the station symbol shows where the station is. I want people to know where things are by looking at this map</p>
             <img id="myImg" src="kobe.png" width="800" height="500">
             <p>This is view of Kobe </p>
+            <p>Source https://www.ikyu.com/kankou/arealist8275/</p>
             <img id="myImg" src="kobe-night.jpg" width="800" height="500">
             <p>This is view of Kobe night</p>
+            <p>Source https://www.jalan.net/news/article/451812/</p>
 
         </div>   
         <!--<div class="content cell large-5 large-order-3">
@@ -114,7 +115,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
                 $('.content').show();
                 $('.site-main').addClass('has-content-open')
                 window.dispatchEvent(new Event('resize'));
-                document.getElementById("contentPanelText").innerHTML = "<h2>Airport</h2>Kobe Airport is the only airport in Kobe. This airport is accessible from any train station in Kobe. So in Kobe, it is often accessed by people. Since the airport is an artificial island, it is a sea airport and handles 3 million air passengers a year. It has facilities such as a 2,500-meter runway and an airport terminal building. The terminal building was designed with the concept of a compact and user-friendly terminal, and is directly connected to the adjacent Kobe Airport Station by a few meters of connecting walkway. It takes 18 minutes by train to Sannomiya (22 minutes directly to Shin-Kobe Station), making access to the center of Kobe City highly convenient."+ '<img id="myImg" src="airport.png" width="800" height="500">' + "This is kobe airport ovewview.";
+                document.getElementById("contentPanelText").innerHTML = "<h2>Airport</h2>Kobe Airport is the only airport in Kobe. This airport is accessible from any train station in Kobe. So in Kobe, it is often accessed by people. Since the airport is an artificial island, it is a sea airport and handles 3 million air passengers a year. It has facilities such as a 2,500-meter runway and an airport terminal building. The terminal building was designed with the concept of a compact and user-friendly terminal, and is directly connected to the adjacent Kobe Airport Station by a few meters of connecting walkway. It takes 18 minutes by train to Sannomiya (22 minutes directly to Shin-Kobe Station), making access to the center of Kobe City highly convenient." + '<img id="myImg" src="airport.png" width="800" height="500">' + "This is kobe airport ovewview." + "<br>" + "Source https://xtech.nikkei.com/atcl/nxt/column/18/00142/00963/";
             });
             
             $('.content-rail').click(function() {
@@ -122,7 +123,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
                 $('.content').show();
                 $('.site-main').addClass('has-content-open')
                 window.dispatchEvent(new Event('resize'));
-                document.getElementById("contentPanelText").innerHTML = "<h2>Rail</h2>The train symbol on this map has stations all over Kobe, and you can access any place. Some stations have access to mountains, parks, and airports. This map picks up the major city of Sannomiya, mountains, parks, and stations near the airport.　In Japan, people mainly use trains instead of cars." + '<img id="myImg" src="sannomiya.png" width="800" height="500">' + "This is Sannomiya station, it is biggest station in Kobe.";
+                document.getElementById("contentPanelText").innerHTML = "<h2>Rail</h2>The train symbol on this map has stations all over Kobe, and you can access any place. Some stations have access to mountains, parks, and airports. This map picks up the major city of Sannomiya, mountains, parks, and stations near the airport.　In Japan, people mainly use trains instead of cars." + '<img id="myImg" src="sannomiya.png" width="800" height="500">' + "This is Sannomiya station, it is biggest station in Kobe." + "<br>" + "Source https://kokomachi.sumai1.com/mu-kobe/95";
                 
             });
             
@@ -131,7 +132,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
                 $('.content').show();
                 $('.site-main').addClass('has-content-open')
                 window.dispatchEvent(new Event('resize'));
-                document.getElementById("contentPanelText").innerHTML = "<h2>Mountain</h2>This mountain symbol shows the mountains in Kobe. These mountains are suitable for hiking, and the scenery at the top of each mountain is said to be beautiful. All of them are about the same elevation, so all mountains are relatively easy to climb. The scenery is different depending on the mountain." + '<img id="myImg" src="mountain.png" width="800" height="500">' + "This is Rokko mountain." + '<img id="myImg" src="mountain-night.png" width="800" height="500">' + "Rokko mounatain night view.";
+                document.getElementById("contentPanelText").innerHTML = "<h2>Mountain</h2>This mountain symbol shows the mountains in Kobe. These mountains are suitable for hiking, and the scenery at the top of each mountain is said to be beautiful. All of them are about the same elevation, so all mountains are relatively easy to climb. The scenery is different depending on the mountain." + '<img id="myImg" src="mountain.png" width="800" height="500">' + "This is Rokko mountain." + "Source http://kobe.travel.coocan.jp/rokko/shisyo_ikari.htm"+ '<img id="myImg" src="mountain-night.png" width="800" height="500">' + "Rokko mounatain night view." +"<br>"+ "Source https://blog.goo.ne.jp/tyrol7676/e/801b68715ce3dad04a2f4bb66efa9175";
                 
             });
             
@@ -140,7 +141,7 @@ From https://medium.com/nyc-planning-digital/a-versatile-layout-for-full-screen-
                 $('.content').show();
                 $('.site-main').addClass('has-content-open')
                 window.dispatchEvent(new Event('resize'));
-                document.getElementById("contentPanelText").innerHTML = "<h2>Park</h2>For the symbol of this park, I chose a relatively large park in Kobe or a park with beautiful flowers. I chose those parks because the purpose of this map is to guide you. These parks are also close to the station, so you can reach your destination relatively early. Some parks are used as soccer and baseball places." + '<img id="myImg" src="park1.png" width="800" height="500">' + '<img id="myImg" src="flower.jpg" width="800" height="500">' + "This is Okura park, there is beutiful flower road." + '<img id="myImg" src="park2.png" width="800" height="500">' + "This is Minato no Mori Park, there is track area.";
+                document.getElementById("contentPanelText").innerHTML = "<h2>Park</h2>For the symbol of this park, I chose a relatively large park in Kobe or a park with beautiful flowers. I chose those parks because the purpose of this map is to guide you. These parks are also close to the station, so you can reach your destination relatively early. Some parks are used as soccer and baseball places." + '<img id="myImg" src="park1.png" width="800" height="500">' + '<img id="myImg" src="flower.jpg" width="800" height="500">' + "This is Okura park, there is beutiful flower road." + "Source https://parkful.net/2021/11/kobe2/"+ '<img id="myImg" src="park2.png" width="800" height="500">' + "This is Minato no Mori Park, there is track area." + "<br>" + "Source https://parkful.net/2021/11/kobe2/";
                 
             });
 
